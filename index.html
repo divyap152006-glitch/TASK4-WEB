@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+
+    <style>
+        /* ===== Default Desktop Styles ===== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #0078d7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .hero {
+            background: #f0f0f0;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+        }
+
+        .box {
+            width: 30%;
+            background: #ddd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* ===== Responsive: Mobile Screens (max-width: 768px) ===== */
+        @media (max-width: 768px) {
+
+            /* Stack nav items */
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            /* Stack boxes vertically */
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 90%;
+                margin-bottom: 15px;
+            }
+
+            /* Reduce hero padding */
+            .hero {
+                padding: 20px;
+            }
+
+            /* Smaller header text */
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Responsive Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to My Page</h2>
+        <p>This page becomes mobile-friendly using CSS media queries.</p>
+    </section>
+
+    <section class="content">
+        <div class="box">
+            <h3>Column 1</h3>
+            <p>This is some sample text for column 1.</p>
+        </div>
+
+        <div class="box">
+            <h3>Column 2</h3>
+            <p>This is some sample text for column 2.</p>
+        </div>
+
+        <div class="box">
+            <h3>Column 3</h3>
+            <p>This is some sample text for column 3.</p>
+        </div>
+    </section>
+
+</body>
+</html>
